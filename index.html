@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pack the Bag</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= START SCREEN ================= -->
+
+<div id="startScreen">
+
+    <picture>
+        <source media="(max-width:768px)" srcset="images/start-mobile.png">
+        <img id="startImage" src="images/start-desktop.png" alt="Pack the Bag">
+    </picture>
+
+    <button id="playBtn">
+        ▶ PLAY
+    </button>
+
+</div>
+
+<!-- ================= GAME ================= -->
+
+<div id="gameScreen" class="hidden">
+
+    <img
+        id="background"
+        src="images/background.png"
+        alt="Background">
+
+    <!-- Top Panel -->
+
+    <div id="topBar">
+
+        <div id="task">
+            Put the pencil in the bag!
+        </div>
+
+        <div id="progress">
+            0 / 7
+        </div>
+
+    </div>
+
+    <!-- Backpack -->
+
+    <img
+        id="bag"
+        src="images/bag.png"
+        alt="Bag">
+<div id="star">⭐</div>
+
+    <!-- School Items -->
+
+    <img id="pen" class="item" src="images/pen.png">
+
+    <img id="pencil" class="item" src="images/pencil.png">
+
+    <img id="ruler" class="item" src="images/ruler.png">
+
+    <img id="rubber" class="item" src="images/rubber.png">
+
+    <img id="book" class="item" src="images/book.png">
+
+    <img id="folder" class="item" src="images/folder.png">
+
+    <img id="pencilCase" class="item" src="images/pencil-case.png">
+
+</div>
+
+<!-- ================= FINISH ================= -->
+
+<div id="finishScreen" class="hidden">
+
+    <h1>Great Job!</h1>
+
+    <button id="restartBtn">
+        Play Again
+    </button>
+
+</div>
+
+<!-- ================= AUDIO ================= -->
+
+<audio id="ding" src="sounds/ding.mp4"></audio>
+
+<audio id="wrong" src="sounds/wrong.mp4"></audio>
+
+<audio id="win" src="sounds/win.mp3"></audio>
+<div id="confetti"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
