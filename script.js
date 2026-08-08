@@ -71,15 +71,61 @@ nextTask();
 
 function placeItems(){
 
-items.forEach(item=>{
+    const isMobile = window.innerWidth < 768;
 
-const x = 40 + Math.random()*700;
-const y = 220 + Math.random()*260;
+    if(isMobile){
 
-item.el.style.left = x + "px";
-item.el.style.top = y + "px";
+        // 2 ряда для телефона
 
-});
+        const positions = [
+
+            {x:8,y:52},
+            {x:32,y:52},
+            {x:56,y:52},
+            {x:80,y:52},
+
+            {x:20,y:70},
+            {x:44,y:70},
+            {x:68,y:70}
+
+        ];
+
+        // немного перемешиваем места
+        positions.sort(()=>Math.random()-0.5);
+
+        items.forEach((item,index)=>{
+
+            item.el.style.left = positions[index].x + "%";
+            item.el.style.top = positions[index].y + "%";
+
+        });
+
+    }else{
+
+        // Компьютер
+
+        const positions = [
+
+            {x:8,y:48},
+            {x:22,y:58},
+            {x:36,y:50},
+            {x:50,y:60},
+            {x:18,y:72},
+            {x:42,y:74},
+            {x:60,y:68}
+
+        ];
+
+        positions.sort(()=>Math.random()-0.5);
+
+        items.forEach((item,index)=>{
+
+            item.el.style.left = positions[index].x + "%";
+            item.el.style.top = positions[index].y + "%";
+
+        });
+
+    }
 
 }
 
