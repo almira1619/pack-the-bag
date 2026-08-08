@@ -163,7 +163,15 @@ body{
 
     position:absolute;
 
-    width:100px;
+    width:90px;
+
+    max-width:14vw;
+
+    height:auto;
+
+    object-fit:contain;
+
+    transition:.3s;
 
     cursor:pointer;
 
@@ -282,7 +290,7 @@ body{
 
 .item{
 
-    width:72px;
+    width:64px;
 
 }
 
